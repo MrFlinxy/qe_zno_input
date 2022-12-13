@@ -1,0 +1,61 @@
+&CONTROL
+    calculation = "scf"
+    max_seconds =  8.64000e+04
+    pseudo_dir  = "."
+    outdir      = "temp"
+/
+
+&SYSTEM
+    a            =  6.57821e+00
+    c            =  5.30682e+00
+    degauss      =  1.00000e-02
+    ecutrho      =  2.25000e+02
+    ecutwfc      =  2.50000e+01
+    hubbard_u(1) =  1.05000e+01
+    hubbard_u(2) =  7.00000e+00
+    hubbard_u(3) =  1.05000e+01
+    ibrav        = 4
+    lda_plus_u   = .TRUE.
+    nat          = 16
+    ntyp         = 3
+    occupations  = "fixed"
+    smearing     = "gaussian"
+    tot_charge   =  1.00000e+00
+    nbnd         = 128
+/
+
+&ELECTRONS
+    conv_thr         =  1.00000e-06
+    electron_maxstep = 200
+    mixing_beta      =  7.00000e-01
+    startingpot      = "atomic"
+    startingwfc      = "atomic+random"
+/
+
+K_POINTS {automatic}
+ 2  2  2  0 0 0
+
+ATOMIC_SPECIES
+Zn     65.39000  Zn.pbe-van.UPF
+O      15.99940  O.pbe-rrkjus.UPF
+Al     26.98154  Al.pbe-rrkj.UPF
+
+ATOMIC_POSITIONS {angstrom}
+Zn      1.644553   0.949481   2.656319
+Zn     -0.000002   1.898965   0.002908
+O       1.644553   0.949481   4.668739
+O      -0.000002   1.898965   2.015329
+Al      0.000002   3.797928   2.656319
+Zn     -1.644553   4.747412   0.002908
+O       0.000002   3.797928   4.668739
+O      -1.644553   4.747412   2.015329
+Zn      4.933656   0.949481   2.656319
+Zn      3.289101   1.898965   0.002908
+O       4.933656   0.949481   4.668739
+O       3.289101   1.898965   2.015329
+Zn      3.289105   3.797928   2.656319
+Zn      1.644550   4.747412   0.002908
+O       3.289105   3.797928   4.668739
+O       1.644550   4.747412   2.015329
+
+
